@@ -302,6 +302,10 @@ func (in *APIPortalStatus) DeepCopyInto(out *APIPortalStatus) {
 		in, out := &in.SyncedAt, &out.SyncedAt
 		*out = (*in).DeepCopy()
 	}
+	if in.UpdatedAt != nil {
+		in, out := &in.UpdatedAt, &out.UpdatedAt
+		*out = (*in).DeepCopy()
+	}
 	if in.OIDC != nil {
 		in, out := &in.OIDC, &out.OIDC
 		*out = new(OIDCConfigStatus)
@@ -484,6 +488,10 @@ func (in *APIStatus) DeepCopyInto(out *APIStatus) {
 	*out = *in
 	if in.SyncedAt != nil {
 		in, out := &in.SyncedAt, &out.SyncedAt
+		*out = (*in).DeepCopy()
+	}
+	if in.UpdatedAt != nil {
+		in, out := &in.UpdatedAt, &out.UpdatedAt
 		*out = (*in).DeepCopy()
 	}
 	return

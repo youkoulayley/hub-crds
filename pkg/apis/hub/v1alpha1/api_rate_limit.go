@@ -104,6 +104,7 @@ const (
 type APIRateLimitStatus struct {
 	Version  string       `json:"version,omitempty"`
 	SyncedAt *metav1.Time `json:"syncedAt,omitempty"`
+
 	// Hash is a hash representing the APIRateLimit.
 	Hash string `json:"hash,omitempty"`
 }

@@ -115,8 +115,9 @@ type OIDCConfigStatus struct {
 
 // APIPortalStatus is the status of an APIPortal.
 type APIPortalStatus struct {
-	Version  string       `json:"version,omitempty"`
-	SyncedAt *metav1.Time `json:"syncedAt,omitempty"`
+	Version   string       `json:"version,omitempty"`
+	SyncedAt  *metav1.Time `json:"syncedAt,omitempty"`
+	UpdatedAt *metav1.Time `json:"updatedAt,omitempty"`
 
 	// OIDC is the OIDC configuration for accessing the exposed APIPortal WebUI.
 	// +optional
